@@ -8,6 +8,16 @@ import { ProductComponent } from './product/product.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductDetailsComponent } from './product/product-details/product-details.component';
 import { OrderComponent } from './order/order.component';
+import { MenComponent } from './men/men.component';
+import { WomenComponent } from './women/women.component';
+import { KidsComponent } from './kids/kids.component';
+import { HomeComponent } from './home/home.component';
+import { Routes, RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -16,10 +26,17 @@ import { OrderComponent } from './order/order.component';
     ProductComponent,
     ProductListComponent,
     ProductDetailsComponent,
-    OrderComponent
+    OrderComponent,
+    MenComponent,
+    WomenComponent,
+    KidsComponent,
+    HomeComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     AppRoutingModule
   ],
   providers: [],
