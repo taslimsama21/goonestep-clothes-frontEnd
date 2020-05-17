@@ -6,6 +6,8 @@ import { KidsComponent } from './kids/kids.component';
 import { WomenComponent } from './women/women.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { AdminDashboardComponent } from './dashboard/admin-dashboard/admin-dashboard.component';
+import { UserDashboardComponent } from './dashboard/user-dashboard/user-dashboard.component';
 
 
 const appRoutes: Routes = [
@@ -15,6 +17,9 @@ const appRoutes: Routes = [
   {path:'kids',component:KidsComponent},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
+  {path:'admin',component:AdminDashboardComponent},
+  {path:'user',component:UserDashboardComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full' }
   
 ];
 

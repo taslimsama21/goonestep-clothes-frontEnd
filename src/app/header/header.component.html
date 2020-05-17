@@ -5,29 +5,57 @@
         </div>
         
         <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
+            <!-- <ul class="nav navbar-nav">
                 <li routerLinkActive="active" 
                 [routerLinkActiveOptions]= "{exact: true}"><a routerLink="/">Home</a></li>
                 <li routerLinkActive="active"><a routerLink="/men">Men</a></li>
                 <li routerLinkActive="active"><a routerLink="/women">Women</a></li>
                 <li routerLinkActive="active"><a routerLink="/kids">Kids</a></li>
-            </ul>
+            </ul> 
 
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <form class="form-inline waves-light" mdbWavesEffect name="srch">
-                        <div class="md-form my-0">
-                          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                        </div>
-                      </form>
-                </li>
-                <li routerLinkActive="active"><a routerLink="/login">Login</a></li>
-                <li routerLinkActive="active"><a routerLink="/signup">Sign Up</a></li>
-            </ul>
-
-              <ul class="nav navbar-nav "></ul> 
             
+            <ul class="nav navbar-nav navbar-right" *ngIf="isLoggedIn">
+                <li class="nav-item">
+                  <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+                </li>
+                <li class="nav-item">
+                  <a href class="nav-link" (click)="logout()">LogOut</a>
+                </li>
+              </ul> -->
+
+
+       <ul class="nav navbar-nav">
+                <li routerLinkActive="active" 
+                [routerLinkActiveOptions]= "{exact: true}"><a routerLink="/">Home</a></li>
+                <li routerLinkActive="active"><a routerLink="/men">Men</a></li>
+                <li routerLinkActive="active"><a routerLink="/women">Women</a></li>
+                <li routerLinkActive="active"><a routerLink="/kids">Kids</a></li>
+                <li routerLinkActive="active" ><a routerLink="/user" *ngIf="showAdminBoard">Admin Profile</a></li>
+                <li routerLinkActive="active" ><a routerLink="/admin" *ngIf="showUserBoard">User Profile</a></li>
+
+            </ul> 
+            <ul class="nav navbar-nav navbar-right"> 
+                <li routerLinkActive="active"><a routerLink="/profile" *ngIf="isLoggedIn">{{username}}</a></li>
+                <li><a href class="nav-link" (click)="logout()" *ngIf="isLoggedIn">Logout</a></li>
+                <!-- <li routerLinkActive="active"><a (onClick)="logout()" *ngIf="isLoggedIn">Logout</a></li> -->
+                 <li routerLinkActive="active"><a routerLink="/login" *ngIf="!isLoggedIn">Login</a></li>
+                <li routerLinkActive="active"><a routerLink="/signup" *ngIf="!isLoggedIn">Sign Up</a></li>
+                
+            </ul>
+
+              
+
+
         </div>
         
     </div>
 </div>
+
+
+                     <!-- <li>
+                        <form class="form-inline waves-light" mdbWavesEffect name="srch">
+                            <div class="md-form my-0">
+                              <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                            </div>
+                          </form>   
+                </li>  -->
