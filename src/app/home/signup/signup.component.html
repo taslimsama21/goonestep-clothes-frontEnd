@@ -1,18 +1,21 @@
 <div class="col-md-4 col-md-offset-4">
     <div class="card card-container">
     
-      
+      <div class="signfm" *ngIf="!isSuccessful">
+         <div style="text-align: center;" id="head">
+          
+          <a routerLink="/signup" id="sgn">Sign Up</a> <br>
+          <p>Already have an account?<a routerLink="/login" id="lgn">Login</a></p> 
+         </div>
       <form
-      *ngIf="!isSuccessful"
+      
       name="form"
       (ngSubmit)="f.form.valid && onSubmit()"
       #f="ngForm"
       novalidate
     >
-    <div class="signfm">
-    <h4 style="text-align: center;" id="head">
-      Register on goonestep Clothes
-    </h4>
+   
+   
       <div class="form-group">
         <label for="username">Username</label>
         <input
@@ -71,16 +74,16 @@
           </div>
         </div>
       </div>
-      <div class="form-group">
-        <button class="btn btn-primary btn-block">Sign Up</button>
+      <div class="form-group" >
+        <button class="btn btn-primary btn-block" id="btn">Sign Up</button>
       </div>
 
       <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
         Signup failed!<br />{{ errorMessage }}
       </div>
-    </div>
+    
     </form>
-
+      </div>
     
       <div class="alert alert-success" *ngIf="isSuccessful">
         Your registration is successful!

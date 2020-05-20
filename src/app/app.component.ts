@@ -18,6 +18,7 @@ private roles: string[];
 
   constructor(private tokenStorageService: TokenStorageService) { }
 
+
   ngOnInit() {
     this.isLoggedIn = !!this.tokenStorageService.getToken();
 
@@ -35,5 +36,7 @@ private roles: string[];
 onNavigate(feature:string){
 this.loadedFeature = feature;
  }
+
+ 
 
 }

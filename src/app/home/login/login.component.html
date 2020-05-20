@@ -8,17 +8,24 @@
       class="profile-img-card"
     /> -->
     
+    <!-- <li routerLinkActive="active"><a routerLink="/login" *ngIf="!isLoggedIn">Login</a></li>
+    <li routerLinkActive="active"><a routerLink="/signup" *ngIf="!isLoggedIn">Sign Up</a></li> -->
+    <div class="fm"  *ngIf="!isLoggedIn">
+    <div style="text-align: center;" id="head" >
+     
+      <a routerLink="/login" *ngIf="!isLoggedIn" id="lgn">Login to your account</a> <br>
+      <p>Don't have an account?<a routerLink="/signup" id="sgn">Sign Up</a> </p>
+    
+    </div>
     <form
-      *ngIf="!isLoggedIn"
+      
       name="form"
       (ngSubmit)="f.form.valid && onSubmit()"
       #f="ngForm"
       novalidate
     >
-    <div class="fm">
-    <h4 style="text-align: center;" id="head">
-      Login on goonestep Clothes
-    </h4>
+    
+    
       <div class="form-group">
         <label for="username">Username</label>
         <input
@@ -60,7 +67,7 @@
         </div>
       </div>
       <div class="form-group">
-        <button class="btn btn-primary btn-block">
+        <button class="btn btn-primary btn-block" id="btn">
           Login
         </button>
       </div>
@@ -73,9 +80,9 @@
           Login failed: {{ errorMessage }}
         </div>
       </div>
-    </div>
+    
     </form>
-  
+  </div>
     <div class="alert alert-success" *ngIf="isLoggedIn">
       Logged in as {{ roles }}.
     </div>

@@ -1,0 +1,27 @@
+<a class="btn btn-primary mb-3" (click)="addProduct()">Add New Book</a>
+<div class="container row">
+    <div class="col-md-6">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Product Name</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.gender}}</td>
+            <!-- <td>
+              <button type="button" class="btn btn-primary" (click)="setProduct(product.id)">Show Details</button>
+            </td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <app-add-product  #upload *ngIf="action === 'add'" [product]="selectedProduct" (productAddedEvent)="refreshData()"></app-add-product>
+    </div>
+  </div>
