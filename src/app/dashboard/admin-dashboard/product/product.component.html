@@ -1,4 +1,4 @@
-<a class="btn btn-primary mb-3" (click)="addProduct()">Add New Book</a>
+<a class="btn btn-primary mb-3" (click)="addProduct()">Add New Product</a>
 <div class="container row">
     <div class="col-md-6">
       <table class="table">
@@ -6,7 +6,8 @@
           <tr>
             <th>ID</th>
             <th>Product Name</th>
-            <th></th>
+            <th>Gender</th>
+            <th>Price</th>
           </tr>
         </thead>
         <tbody>
@@ -14,14 +15,16 @@
             <td>{{product.id}}</td>
             <td>{{product.name}}</td>
             <td>{{product.gender}}</td>
-            <!-- <td>
-              <button type="button" class="btn btn-primary" (click)="setProduct(product.id)">Show Details</button>
-            </td> -->
+            <td>{{product.price}}</td>
+            <td>
+              <button type="button" class="btn btn-primary" (click)="viewProduct(product.id)" >Show Details</button>
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
     <div class="col-md-6">
       <app-add-product  #upload *ngIf="action === 'add'" [product]="selectedProduct" (productAddedEvent)="refreshData()"></app-add-product>
+      <app-product-details *ngIf="action === 'view'" [product]="selectedProduct"></app-product-details>
     </div>
   </div>

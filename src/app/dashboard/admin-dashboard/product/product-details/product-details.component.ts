@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { HttpClientService } from './../../../../services/http-client.service';
+import { Component, OnInit, Input } from '@angular/core';
+import { Product } from 'src/app/model/Product.model';
 
 @Component({
   selector: 'app-product-details',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailsComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  product: Product;
+
+  constructor(private httpClientService: HttpClientService, private router: Router) { }
 
   ngOnInit(): void {
   }
-
+  deleteProduct() {
+    this.httpClientService.deleteProduct(this.product.id).subscribe(
+      (product) => {
+        this.router.navigate(['admin', 'products']);
+      }
+    );
+  }
 }
