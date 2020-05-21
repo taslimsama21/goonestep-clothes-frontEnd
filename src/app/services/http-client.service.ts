@@ -26,6 +26,6 @@ export class HttpClientService {
   }
   
   deleteProduct(id) {
-    return this.httpClient.delete<Product>('http://localhost:8080/api/product' + id);
+    return this.httpClient.delete<Product>('http://localhost:8080/api/product/' + id);
   }
 }

@@ -25,6 +25,6 @@
     </div>
     <div class="col-md-6">
       <app-add-product  #upload *ngIf="action === 'add'" [product]="selectedProduct" (productAddedEvent)="refreshData()"></app-add-product>
-      <app-product-details *ngIf="action === 'view'" [product]="selectedProduct"></app-product-details>
+      <app-product-details *ngIf="action === 'view'" [product]="selectedProduct" (productDeletedEvent)="refreshData()"></app-product-details>
     </div>
   </div>
