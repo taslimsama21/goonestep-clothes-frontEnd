@@ -3,3 +3,8 @@ table, th, td {
     border: 1px solid black; 
     border-collapse: collapse;
     }
+    #lnk{
+        display: inline;
+       margin-right: 5em;
+       padding-right: 10px;
+    }

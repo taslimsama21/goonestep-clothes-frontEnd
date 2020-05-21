@@ -27,4 +27,7 @@ export class ProductDetailsComponent implements OnInit {
       }
     );
   }
+  editProduct() {
+    this.router.navigate(['admin', 'products'], { queryParams: { action: 'edit', id: this.product.id } });
+  }
 }
