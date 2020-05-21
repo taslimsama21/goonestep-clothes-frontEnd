@@ -27,13 +27,11 @@
        <ul class="nav navbar-nav">
                 <li routerLinkActive="active" 
                 [routerLinkActiveOptions]= "{exact: true}"><a routerLink="/">Home</a></li>
-                <li routerLinkActive="active"><a routerLink="/men" *ngIf="showUserBoard">Men</a></li>
-                <li routerLinkActive="active"><a routerLink="/women" *ngIf="showUserBoard">Women</a></li>
-                <li routerLinkActive="active"><a routerLink="/kids" *ngIf="showUserBoard">Kids</a></li> 
+                <li routerLinkActive="active"><a routerLink="/all-products" *ngIf="showUserBoard">All Products</a></li>
                 <li routerLinkActive="active" ><a routerLink="/admin/products" *ngIf="showAdminBoard">Product</a></li>
                 <li routerLinkActive="active" ><a routerLink="/admin/users" *ngIf="showAdminBoard" >Users</a></li>
                 <li routerLinkActive="active" ><a routerLink="#" *ngIf="showAdminBoard">Orders</a></li>
-                <li routerLinkActive="active" ><a routerLink="/admin" *ngIf="showUserBoard">User Profile</a></li>
+                <li routerLinkActive="active" ><a routerLink="/mycart" *ngIf="showUserBoard">My Orders</a></li>
 
             </ul> 
             <ul class="nav navbar-nav navbar-right"> 

@@ -72,11 +72,7 @@ private selectedFile;
           this.router.navigate(['admin', 'products']);
         }
       );
-    }     
-  
-  
-  
-  
+    }      
   
     }
 }

@@ -1,3 +1,4 @@
+import { AllProductsComponent } from './dashboard/user-dashboard/all-products/all-products.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {  FormsModule} from '@angular/forms';
@@ -9,9 +10,6 @@ import { HeaderComponent } from './header/header.component';
 import { ProductComponent } from './dashboard/admin-dashboard/product/product.component';
 import { ProductDetailsComponent } from './dashboard/admin-dashboard/product/product-details/product-details.component';
 import { OrderComponent } from './order/order.component';
-import { MenComponent } from './dashboard/user-dashboard/men/men.component';
-import { WomenComponent } from './dashboard/user-dashboard/women/women.component';
-import { KidsComponent } from './dashboard/user-dashboard/kids/kids.component';
 import { HomeComponent } from './home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './home/login/login.component';
@@ -24,6 +22,7 @@ import { authInterceptorProviders } from './interceptor/auth.interceptor';
 import { IsAdminDirective } from './custom-directives/is-admin.directive';
 import { UsersComponent } from './dashboard/admin-dashboard/users/users.component';
 import { AddProductComponent } from './dashboard/admin-dashboard/product/add-product/add-product.component';
+import { MyCartComponent } from './dashboard/user-dashboard/my-cart/my-cart.component';
 
 
 
@@ -35,10 +34,8 @@ import { AddProductComponent } from './dashboard/admin-dashboard/product/add-pro
     ProductComponent,
     ProductDetailsComponent,
     OrderComponent,
-    MenComponent,
-    WomenComponent,
-    KidsComponent,
     HomeComponent,
+    AllProductsComponent,
     LoginComponent,
     SignupComponent,
     AdminDashboardComponent,
@@ -46,6 +43,7 @@ import { AddProductComponent } from './dashboard/admin-dashboard/product/add-pro
     IsAdminDirective,
     UsersComponent,
     AddProductComponent,
+    MyCartComponent,
     
   ],
   imports: [
