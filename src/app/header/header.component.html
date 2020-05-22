@@ -25,17 +25,17 @@
 
 
        <ul class="nav navbar-nav">
-                <li routerLinkActive="active" 
-                [routerLinkActiveOptions]= "{exact: true}"><a routerLink="/">Home</a></li>
+                <li routerLinkActive="active"><a routerLink="/admin/home" *ngIf="showAdminBoard">Home admin</a></li>
+                <li routerLinkActive="active"><a routerLink="/user/home" *ngIf="showUserBoard">Home user</a></li>
                 <li routerLinkActive="active"><a routerLink="/all-products" *ngIf="showUserBoard">All Products</a></li>
                 <li routerLinkActive="active" ><a routerLink="/admin/products" *ngIf="showAdminBoard">Product</a></li>
                 <li routerLinkActive="active" ><a routerLink="/admin/users" *ngIf="showAdminBoard" >Users</a></li>
                 <li routerLinkActive="active" ><a routerLink="#" *ngIf="showAdminBoard">Orders</a></li>
-                <li routerLinkActive="active" ><a routerLink="/mycart" *ngIf="showUserBoard">My Orders</a></li>
+                <li routerLinkActive="active" ><a routerLink="/myorders" *ngIf="showUserBoard">My Orders</a></li>
 
             </ul> 
             <ul class="nav navbar-nav navbar-right"> 
-              <li routerLinkActive="active" ><a routerLink="#" *ngIf="showUserBoard">My Orders</a></li>
+              
                 <li routerLinkActive="active"><a routerLink="/profile" *ngIf="isLoggedIn">{{username}}</a></li>
                 <li><a href class="nav-link" (click)="logout()" *ngIf="isLoggedIn">Logout</a></li>
                 

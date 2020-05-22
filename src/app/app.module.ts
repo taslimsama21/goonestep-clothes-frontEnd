@@ -12,8 +12,8 @@ import { ProductDetailsComponent } from './dashboard/admin-dashboard/product/pro
 import { OrderComponent } from './order/order.component';
 import { HomeComponent } from './home/home.component';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './home/login/login.component';
-import { SignupComponent } from './home/signup/signup.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 import { from } from 'rxjs';
 import { AdminDashboardComponent } from './dashboard/admin-dashboard/admin-dashboard.component';
 import { UserDashboardComponent } from './dashboard/user-dashboard/user-dashboard.component';
