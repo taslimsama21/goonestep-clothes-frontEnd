@@ -15,6 +15,7 @@ export class AdminDashboardComponent implements OnInit {
     this.userService.getAdminBoard().subscribe(
       data => {
         this.content = data;
+        
       },
       err => {
         this.content = JSON.parse(err.error).message;

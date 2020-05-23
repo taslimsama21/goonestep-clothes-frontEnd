@@ -10,7 +10,6 @@ import { HeaderComponent } from './header/header.component';
 import { ProductComponent } from './dashboard/admin-dashboard/product/product.component';
 import { ProductDetailsComponent } from './dashboard/admin-dashboard/product/product-details/product-details.component';
 import { OrderComponent } from './order/order.component';
-import { HomeComponent } from './home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
@@ -23,6 +22,7 @@ import { IsAdminDirective } from './custom-directives/is-admin.directive';
 import { UsersComponent } from './dashboard/admin-dashboard/users/users.component';
 import { AddProductComponent } from './dashboard/admin-dashboard/product/add-product/add-product.component';
 import { MyCartComponent } from './dashboard/user-dashboard/my-cart/my-cart.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -34,9 +34,9 @@ import { MyCartComponent } from './dashboard/user-dashboard/my-cart/my-cart.comp
     ProductComponent,
     ProductDetailsComponent,
     OrderComponent,
-    HomeComponent,
     AllProductsComponent,
     LoginComponent,
+    HomeComponent,
     SignupComponent,
     AdminDashboardComponent,
     UserDashboardComponent,
@@ -44,6 +44,7 @@ import { MyCartComponent } from './dashboard/user-dashboard/my-cart/my-cart.comp
     UsersComponent,
     AddProductComponent,
     MyCartComponent,
+    HomeComponent,
     
   ],
   imports: [

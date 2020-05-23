@@ -9,7 +9,7 @@ import { TokenStorageService } from './services/token-storage.service';
 })
 export class AppComponent {
 title = 'goonestep-clothes-app';
-loadedFeature = 'home;'
+//loadedFeature = 'home;'
 private roles: string[];
   isLoggedIn = false;
   showAdminBoard = false;
@@ -32,11 +32,5 @@ private roles: string[];
       this.username = user.username;
     }
   }
-
-onNavigate(feature:string){
-this.loadedFeature = feature;
- }
-
- 
 
 }
