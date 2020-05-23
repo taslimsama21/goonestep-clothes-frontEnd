@@ -14,6 +14,8 @@ export class LoginComponent implements OnInit {
   isLoginFailed = false;
   errorMessage = '';
   roles: string[] = [];
+  showAdminBoard = false;
+  showUserBoard = false;
 
   constructor(private authService: AuthService, private tokenStorage: TokenStorageService,private router: Router) { }
 
@@ -33,6 +35,7 @@ export class LoginComponent implements OnInit {
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUser().roles;
         this.reloadPage();
+        
        
       },
       err => {
@@ -43,12 +46,12 @@ export class LoginComponent implements OnInit {
   }
 
   reloadPage() {
-    if(this.roles.includes('ROLE_ADMIN')){
-      this.router.navigate(['admin/home']);
+    if(this.showAdminBoard = this.roles.includes('ROLE_ADMIN')){
+      this.router.navigate(['admin-home']);
     }
-    else if(this.roles.includes('ROLE_USER'))
+    else if(this.showUserBoard = this.roles.includes('ROLE_USER'))
     {
-      this.router.navigate(['user/home']);
+      this.router.navigate(['user-home']);
     }
   }
 }

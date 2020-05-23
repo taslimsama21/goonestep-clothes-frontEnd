@@ -1,32 +1,14 @@
-<div class="navbar navbar-default" *ngIf="isLoggedIn" >
+<!-- <div class="navbar navbar-default" *ngIf="isLoggedIn" >
     <div class="container-fluid">
         <div class="navbar-header">
             <a href="#" class="navbar-brand">goonestep Clothes</a>
         </div>
         
         <div class="collapse navbar-collapse"> 
-            <!-- <ul class="nav navbar-nav">
-                <li routerLinkActive="active" 
-                [routerLinkActiveOptions]= "{exact: true}"><a routerLink="/">Home</a></li>
-                <li routerLinkActive="active"><a routerLink="/men">Men</a></li>
-                <li routerLinkActive="active"><a routerLink="/women">Women</a></li>
-                <li routerLinkActive="active"><a routerLink="/kids">Kids</a></li>
-            </ul> 
-
-            
-            <ul class="nav navbar-nav navbar-right" *ngIf="isLoggedIn">
-                <li class="nav-item">
-                  <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
-                </li>
-                <li class="nav-item">
-                  <a href class="nav-link" (click)="logout()">LogOut</a>
-                </li>
-              </ul> -->
-
-
+          
        <ul class="nav navbar-nav">
-                <li routerLinkActive="active"><a routerLink="/admin/home" *ngIf="showAdminBoard">Home admin</a></li>
-                <li routerLinkActive="active"><a routerLink="/user/home" *ngIf="showUserBoard">Home user</a></li>
+                <li routerLinkActive="active"><a routerLink="/admin-home" *ngIf="showAdminBoard">Home admin</a></li>
+                <li routerLinkActive="active"><a routerLink="/user-home" *ngIf="showUserBoard">Home user</a></li>
                 <li routerLinkActive="active"><a routerLink="/all-products" *ngIf="showUserBoard">All Products</a></li>
                 <li routerLinkActive="active" ><a routerLink="/admin/products" *ngIf="showAdminBoard">Product</a></li>
                 <li routerLinkActive="active" ><a routerLink="/admin/users" *ngIf="showAdminBoard" >Users</a></li>
@@ -47,7 +29,7 @@
         </div>
         
     </div>
-</div>
+</div> -->
 
 
                      <!-- <li>
@@ -57,3 +39,75 @@
                             </div>
                           </form>   
                 </li>  -->
+
+                <!-- <ul class="nav navbar-nav">
+                <li routerLinkActive="active" 
+                [routerLinkActiveOptions]= "{exact: true}"><a routerLink="/">Home</a></li>
+                <li routerLinkActive="active"><a routerLink="/men">Men</a></li>
+                <li routerLinkActive="active"><a routerLink="/women">Women</a></li>
+                <li routerLinkActive="active"><a routerLink="/kids">Kids</a></li>
+            </ul> 
+
+            
+            <ul class="nav navbar-nav navbar-right" *ngIf="isLoggedIn">
+                <li class="nav-item">
+                  <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+                </li>
+                <li class="nav-item">
+                  <a href class="nav-link" (click)="logout()">LogOut</a>
+                </li>
+              </ul> -->
+
+              <div class="navbar navbar-default" *ngIf="isLoggedIn && showAdminBoard" >
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a href="#" class="navbar-brand">goonestep Clothes</a>
+                    </div>
+                    
+                    <div class="collapse navbar-collapse"> 
+                      
+                   <ul class="nav navbar-nav">
+                            <li routerLinkActive="active"><a routerLink="/admin-home" >Home admin</a></li>
+                            <li routerLinkActive="active" ><a routerLink="/admin/products">Product</a></li>
+                            <li routerLinkActive="active" ><a routerLink="/admin/users">Users</a></li>
+                            <li routerLinkActive="active" ><a routerLink="#">Orders</a></li>
+                           
+                        </ul> 
+                        <ul class="nav navbar-nav navbar-right"> 
+                          
+                            <li routerLinkActive="active"><a routerLink="/profile" *ngIf="isLoggedIn">{{username}}</a></li>
+                            <li><a href class="nav-link" (click)="logout()" *ngIf="isLoggedIn">Logout</a></li>
+                            
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+
+            <div class="navbar navbar-default" *ngIf="isLoggedIn && showUserBoard" >
+              <div class="container-fluid">
+                  <div class="navbar-header">
+                      <a href="#" class="navbar-brand">goonestep Clothes</a>
+                  </div>
+                  
+                  <div class="collapse navbar-collapse"> 
+                    
+                 <ul class="nav navbar-nav">
+                          <li routerLinkActive="active"><a routerLink="/user-home">Home user</a></li>
+                          <li routerLinkActive="active"><a routerLink="/all-products">All Products</a></li>
+                          <li routerLinkActive="active" ><a routerLink="/myorders">My Orders</a></li>
+          
+                      </ul> 
+                      <ul class="nav navbar-nav navbar-right"> 
+                        
+                          <li routerLinkActive="active"><a routerLink="/profile" *ngIf="isLoggedIn">{{username}}</a></li>
+                          <li><a href class="nav-link" (click)="logout()" *ngIf="isLoggedIn">Logout</a></li>
+                          
+                      </ul>
+  
+                  </div>
+                  
+              </div>
+          </div>

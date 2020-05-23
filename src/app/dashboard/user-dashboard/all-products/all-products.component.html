@@ -1,37 +1,37 @@
-<div class="container row">
+<!-- <div class="container row">
     <div class="col-md-2">
         <h3>Products</h3>
     </div>
-    <div class="col-md-10 custom-products-order-container">
+    <div class="col-md-10 custom-products-cart-container">
         <div class="offset-md-8">
             <ul class="nav navbar-nav navbar-right">
 
                 <li class="dropdown">
                     <br>
                     <a href="/myorders" class="btn btn-info btn-lg" data-toggle="dropdown" role="button" aria-expanded="false">
-                        <span class="fa fa-shopping-order">
-                            Products Added In Order:
+                        <span class="fa fa-shopping-cart">
+                            Cart:
                         </span>
-                        <span class="caret">{{orderProducts.length}}</span>
+                        <span class="caret">{{cartProducts.length}}</span>
                     </a>
-                    <ul class="dropdown-menu dropdown-order" role="menu">
-                        <li *ngFor="let item of orderProducts">
-                            <div class="item product-order-item row">
+                    <ul class="dropdown-menu dropdown-cart" role="menu">
+                        <li *ngFor="let item of cartProducts">
+                            <div class="item product-cart-item row">
                                 <div class="col-md-8" *ngIf="item">{{item.name}}</div>
                                 <div class="col-md-4" *ngIf="item"><strong>${{item.price}}</strong></div>
                             </div>
                         </li>
                         <hr>
-                        <li><a class="btn btn-small btn-success" role="button" (click)="goToOrder()">View Order</a></li>
+                        <li><a class="btn btn-small btn-success" role="button" (click)="goToCart()">View Cart</a></li>
                         <br>
-                        <li *ngIf="orderProducts.length > 0">
-                            <a class="btn btn-small btn-warning" role="button" (click)="emptyOrder()">Empty Order</a></li>
+                        <li *ngIf="cartProducts.length > 0">
+                            <a class="btn btn-small btn-warning" role="button" (click)="emptyCarts()">Empty Cart</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
     </div>
-</div>
+</div> -->
 
 
 
@@ -46,7 +46,7 @@
                     <p style="margin-left: 50px">${{product.price}}</p>
                 </div>
                 <div class="offset-md-4 col-md-4">
-                    <button class="btn btn-primary btn-sm" (click)="addToOrder(product.id)">Order</button>
+                    <button class="btn btn-primary btn-sm" (click)="addToCart(product.id)">Cart</button>
                 </div>
             </div>
 

@@ -14,9 +14,9 @@ import { UserDashboardComponent } from './dashboard/user-dashboard/user-dashboar
 
 const appRoutes: Routes = [
   
-  //{path:'',component:LoginComponent},
-  {path:'admin/home',component:AdminDashboardComponent},
-  {path:'user/home',component:UserDashboardComponent},
+  {path:'',component:LoginComponent},
+  {path:'admin-home',component:AdminDashboardComponent},
+  {path:'user-home',component:UserDashboardComponent},
   {path:'all-products',component:AllProductsComponent},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},

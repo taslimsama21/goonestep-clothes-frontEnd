@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class AllProductsComponent implements OnInit {
   products: Array<Product>;
   productsRecieved: Array<Product>;
-  orderProducts: any;
+  cartProducts: any;
 
   constructor(private router: Router, private httpClientService: HttpClientService) { }
 
@@ -19,11 +19,11 @@ export class AllProductsComponent implements OnInit {
     this.httpClientService.getProducts().subscribe(
       response => this.handleSuccessfulResponse(response),
     );
-    let data = localStorage.getItem('order');
+    let data = localStorage.getItem('cart');
     if (data !== null) {
-      this.orderProducts = JSON.parse(data);
+      this.cartProducts = JSON.parse(data);
     } else {
-      this.orderProducts = [];
+      this.cartProducts = [];
     }
   }
   handleSuccessfulResponse(response) {
@@ -42,39 +42,39 @@ export class AllProductsComponent implements OnInit {
     }
   }
 
-  addToOrder(productId) {
+  addToCart(productId) {
     let product = this.products.find(product => {
       return product.id === +productId;
     });
-    let orderData = [];
+    let cartData = [];
    
-    let data = localStorage.getItem('order');
+    let data = localStorage.getItem('cart');
     
     if (data !== null) {
-      orderData = JSON.parse(data);
+      cartData = JSON.parse(data);
     }
    
-    orderData.push(product);
+    cartData.push(product);
     
-    this.updateOrderData(orderData);
+    this.updateCartData(cartData);
     
-    localStorage.setItem('order', JSON.stringify(orderData));
+    localStorage.setItem('cart', JSON.stringify(cartData));
     
     product.isAdded = true;
   }
 
-  updateOrderData(orderData) {
-    this.orderProducts = orderData;
+  updateCartData(cartData) {
+    this.cartProducts = cartData;
   }
 
-  goToOrder() {
-    this.router.navigate(['/order']);
-  }
+  // goToCart() {
+  //   this.router.navigate(['/cart']);
+  // }
 
-  emptyOrder() {
-    this.orderProducts = [];
-    localStorage.clear();
-  }
+  // emptyCart() {
+  //   this.cartProducts = [];
+  //   localStorage.clear();
+  // }
 
 
 }
