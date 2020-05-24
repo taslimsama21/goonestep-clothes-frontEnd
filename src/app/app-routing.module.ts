@@ -1,5 +1,7 @@
-import { OrderComponent } from './order/order.component';
-import { MyCartComponent } from './dashboard/user-dashboard/my-cart/my-cart.component';
+import { AdminOrdersComponent } from './dashboard/admin-dashboard/admin-orders/admin-orders.component';
+import { UserOrdersComponent } from './dashboard/user-dashboard/user-orders/user-orders.component';
+
+
 import { AllProductsComponent } from './dashboard/user-dashboard/all-products/all-products.component';
 import { ProductComponent } from './dashboard/admin-dashboard/product/product.component';
 import { UsersComponent } from './dashboard/admin-dashboard/users/users.component';
@@ -24,8 +26,8 @@ const appRoutes: Routes = [
  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {path: 'admin/users', component:UsersComponent},
   {path: 'admin/products', component:ProductComponent},
-  {path:'mycart',component:MyCartComponent},
-  {path:'myorders',component:OrderComponent}
+  {path:'user/orders',component:UserOrdersComponent},
+  {path:'admin/orders',component:AdminOrdersComponent}
   
 ];
 

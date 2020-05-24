@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductComponent } from './dashboard/admin-dashboard/product/product.component';
 import { ProductDetailsComponent } from './dashboard/admin-dashboard/product/product-details/product-details.component';
-import { OrderComponent } from './order/order.component';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
@@ -21,8 +20,9 @@ import { authInterceptorProviders } from './interceptor/auth.interceptor';
 import { IsAdminDirective } from './custom-directives/is-admin.directive';
 import { UsersComponent } from './dashboard/admin-dashboard/users/users.component';
 import { AddProductComponent } from './dashboard/admin-dashboard/product/add-product/add-product.component';
-import { MyCartComponent } from './dashboard/user-dashboard/my-cart/my-cart.component';
 import { HomeComponent } from './home/home.component';
+import { UserOrdersComponent } from './dashboard/user-dashboard/user-orders/user-orders.component';
+import { AdminOrdersComponent } from './dashboard/admin-dashboard/admin-orders/admin-orders.component';
 
 
 
@@ -33,7 +33,6 @@ import { HomeComponent } from './home/home.component';
     HeaderComponent,
     ProductComponent,
     ProductDetailsComponent,
-    OrderComponent,
     AllProductsComponent,
     LoginComponent,
     HomeComponent,
@@ -43,8 +42,11 @@ import { HomeComponent } from './home/home.component';
     IsAdminDirective,
     UsersComponent,
     AddProductComponent,
-    MyCartComponent,
     HomeComponent,
+    UserOrdersComponent,
+    AdminOrdersComponent,
+    UserOrdersComponent,
+    AdminOrdersComponent
     
   ],
   imports: [

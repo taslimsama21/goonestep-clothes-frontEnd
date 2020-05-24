@@ -36,6 +36,7 @@ export class LoginComponent implements OnInit {
         this.roles = this.tokenStorage.getUser().roles;
         this.reloadPage();
         //this.router.navigate(['admin/home']);
+        
       },
       err => {
         this.errorMessage = err.error.message;
@@ -56,8 +57,19 @@ export class LoginComponent implements OnInit {
   // }
 
   reloadPage(){
-    window.location.reload();
+    
     //this.router.navigate(['admin-home']);
+    if(this.showAdminBoard = this.roles.includes('ROLE_ADMIN')){
+      window.location.reload();
+      this.router.navigate(['/admin/home']);
+      
+    }
+    else if(this.showUserBoard = this.roles.includes('ROLE_USER'))
+    {
+      window.location.reload();
+      this.router.navigate(['/user/home']);
+      
+    }
   }
 
 }

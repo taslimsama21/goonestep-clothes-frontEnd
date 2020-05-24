@@ -7,3 +7,5 @@ export class Product{
     retrievedImage: string;
     isAdded: boolean;
 }
+
+        
