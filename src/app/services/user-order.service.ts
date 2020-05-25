@@ -14,7 +14,7 @@ export class UserOrderService {
   }
 
   addNewOrder(newOrder:Order){
-    return this.httpClient.post<Order>('http://localhost:8080/api//userorder/add', newOrder);
+    return this.httpClient.post<Order>('http://localhost:8080/api//user/order/new', newOrder);
   }
   
   editOrder(editedOrder:Order){
@@ -33,6 +33,9 @@ export class UserOrderService {
   }
   getMyRejectedOrders(orderId){
     return this.httpClient.get<Order>('http://localhost:8080/api/user/order/rejected'+orderId);
+  }
+  getOrderDetails(orderId){
+    return this.httpClient.get<Order>('http://localhost:8080/api/user/order/details'+orderId);
   }
 
 }

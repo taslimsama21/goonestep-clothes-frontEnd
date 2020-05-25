@@ -26,7 +26,7 @@ approveOrder(orderData:Order){
 rejectOrder(orderData:Order){
   return this.httpClient.put('http://localhost:8080/api/admin/order/reject',orderData);
 }
- listOrderPerUser(orderData){
-  return this.httpClient.post('http://localhost:8080/api/admin/order/list/per/user',orderData);
+listOrdersofUser(orderData){
+  return this.httpClient.post('http://localhost:8080/api/admin/order/of/user',orderData);
 }
 }
